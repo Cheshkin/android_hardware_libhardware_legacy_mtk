@@ -1,0 +1,9 @@
+# Copyright 2006 The Android Open Source Project
+
+LOCAL_SRC_FILES += vibrator/vibrator.c
+
+ifdef BOARD_HAVE_OPENSOURCE_IMMVIBE
+LOCAL_SHARED_LIBRARIES += libimmvibeconnector
+LOCAL_CFLAGS += -DHAVE_OPENSOURCE_IMMVIBE
+LOCAL_CPPFLAGS += -DHAVE_OPENSOURCE_IMMVIBE
+endif
